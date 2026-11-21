@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="أداة تواصل بالصور والعبارات من تمكين.">
+  <title>التواصل بالصور | TAMKEEN</title>
+  <link rel="stylesheet" href="communication.css">
+</head>
+<body>
+  <header class="tool-header">
+    <a class="brand" href="index.html">TAMKEEN <span>✳</span></a>
+    <nav class="tool-nav"><a href="index.html">الرئيسية</a><a href="tools.html">الأدوات</a><a href="account.html">حسابي</a></nav>
+  </header>
+
+  <main class="tool-container">
+    <section class="tool-intro">
+      <span class="eyebrow">AAC COMMUNICATION TOOL</span>
+      <h1>عبّر عن نفسك بطريقتك</h1>
+      <p>اختر الصور والعبارات لتكوين جملة، ثم استمع إليها بصوت مسموع.</p>
+    </section>
+
+    <section class="panel sentence-panel" aria-labelledby="sentenceTitle">
+      <div class="panel-heading">
+        <h2 id="sentenceTitle">جملتك</h2>
+        <button class="text-button" id="clearButton" type="button">مسح الكل</button>
+      </div>
+      <div id="sentence" class="sentence-area" aria-live="polite">
+        <span class="empty-message">اختار صورة أو عبارة للبدء...</span>
+      </div>
+      <div class="sentence-actions">
+        <button class="button button-primary" id="speakButton" type="button">🔊 انطق الجملة</button>
+        <button class="button button-secondary" id="undoButton" type="button">تراجع عن آخر كلمة</button>
+      </div>
+      <p class="tool-feedback" id="feedback" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>اختار اللي عايز تقوله</h2>
+      <div class="category-list" role="group" aria-label="فئات العبارات">
+        <button class="category-button active" type="button" data-category="needs">احتياجاتي</button>
+        <button class="category-button" type="button" data-category="feelings">مشاعري</button>
+        <button class="category-button" type="button" data-category="actions">أفعال</button>
+        <button class="category-button" type="button" data-category="people">أشخاص</button>
+      </div>
+      <div id="cards" class="choice-grid"></div>
+    </section>
+
+    <section class="panel">
+      <h2>أضف عبارة خاصة</h2>
+      <form id="customForm" class="custom-form">
+        <label class="visually-hidden" for="customText">عبارة مخصصة</label>
+        <input id="customText" type="text" maxlength="100" placeholder="اكتب العبارة هنا..." autocomplete="off">
+        <button class="button button-primary" type="submit">إضافة العبارة</button>
+      </form>
+    </section>
+    <p class="disclaimer">هذه أداة مساعدة أولية. جودة النطق وتوفر الصوت العربي يعتمدان على الجهاز والمتصفح المستخدم.</p>
+  </main>
+  <script src="communication.js"></script>
+<script src="accessibility.js"></script>
+</body>
+</html>

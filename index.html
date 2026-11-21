@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="تمكين - منصة رقمية تساعد الأشخاص ذوي الإعاقة على التواصل والتعلم والاستقلالية.">
+  <title>TAMKEEN | تمكين</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="TAMKEEN Home">TAMKEEN <span>✳</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home" data-i18n="navHome">الرئيسية</a>
+      <a href="#services" data-i18n="navServices">خدماتنا</a>
+      <a href="#about" data-i18n="navAbout">عن المنصة</a>
+      <a href="tools.html" data-i18n="navTools">الأدوات</a>
+      <a href="learning.html">المكتبة التعليمية</a>
+      <a href="account.html">حسابي</a>
+    </nav>
+    <button class="language-button" id="languageButton" type="button">English</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <span class="eyebrow" data-i18n="eyebrow">TECHNOLOGY FOR EVERYONE</span>
+        <h1 data-i18n="heroTitle">عالم أسهل.. بإمكانياتك أنت.</h1>
+        <p data-i18n="heroText">منصة رقمية تساعد ذوي الإعاقة على التواصل والتعلم والاستقلالية.</p>
+        <a class="button button-primary" href="#services" data-i18n="heroCta">اكتشف خدماتنا</a>
+      </div>
+      <div class="hero-art" role="img" aria-label="Inclusive accessibility illustration">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-card art-card-main">
+          <div class="art-symbol">✳</div>
+          <strong>TAMKEEN</strong>
+          <span data-i18n="artCaption">التكنولوجيا للجميع</span>
+        </div>
+        <div class="art-card art-card-small card-top">💬</div>
+        <div class="art-card art-card-small card-bottom">♿</div>
+        <div class="art-card art-card-small card-side">🔊</div>
+      </div>
+    </section>
+
+    <section class="services section" id="services">
+      <div class="section-heading">
+        <span class="eyebrow">OUR SERVICES</span>
+        <h2 data-i18n="servicesTitle">كيف يمكننا مساعدتك؟</h2>
+        <p data-i18n="servicesText">اختر الأداة التي تناسب احتياجاتك.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card">
+          <div class="service-icon">👁️</div>
+          <h3 data-i18n="visualTitle">المساعدة البصرية</h3>
+          <p data-i18n="visualText">أدوات لقراءة النصوص وتكبير المحتوى وتحسين وضوحه.</p>
+          <a class="service-link" href="tools.html#visual" data-i18n="openTool">افتح الأداة ←</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">👂</div>
+          <h3 data-i18n="hearingTitle">المساعدة السمعية</h3>
+          <p data-i18n="hearingText">أدوات لتحويل الكلام إلى نص لدعم التواصل.</p>
+          <a class="service-link" href="tools.html#hearing" data-i18n="openTool">افتح الأداة ←</a>
+        </article>
+        <article class="service-card featured-card">
+          <div class="service-icon">💬</div>
+          <h3 data-i18n="communicationTitle">التواصل بالصور</h3>
+          <p data-i18n="communicationText">كوّن جملة من عبارات واضحة واستمع إليها بصوت مسموع.</p>
+          <a class="service-link" href="communication.html" data-i18n="openTool">افتح الأداة ←</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">📷</div>
+          <h3>قراءة الصور والمستندات</h3>
+          <p>التقط صورة أو ارفع مستندًا لاستخراج النص وقراءته بصوت مسموع.</p>
+          <a class="service-link" href="tools.html#image-reader">افتح الأداة ←</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">📚</div>
+          <h3 data-i18n="learningTitle">التعلم المبسط</h3>
+          <p data-i18n="learningText">محتوى تعليمي منظم وسهل القراءة.</p>
+          <a class="service-link" href="learning.html">افتح المكتبة التعليمية ←</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">📈</div>
+          <h3>متابعة التقدم</h3>
+          <p>تابع الدروس المكتملة ونتائج الأنشطة التعليمية.</p>
+          <a class="service-link" href="learning.html#progress">عرض التقدم ←</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">🏠</div>
+          <h3 data-i18n="dailyTitle">الحياة اليومية</h3>
+          <p data-i18n="dailyText">أدوات لتنظيم المهام والروتين اليومي.</p>
+          <a class="service-link" href="tools.html#daily" data-i18n="openTool">افتح الأداة ←</a>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">💼</div>
+          <h3 data-i18n="workTitle">التعليم والعمل</h3>
+          <p data-i18n="workText">مسارات لتطوير المهارات والاستعداد للعمل.</p>
+          <a class="service-link" href="tools.html#work" data-i18n="openTool">افتح الأداة ←</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-inner">
+        <span class="eyebrow">ABOUT TAMKEEN</span>
+        <h2 data-i18n="aboutTitle">التكنولوجيا للجميع.. دون استثناء.</h2>
+        <p data-i18n="aboutText">تمكين مشروع يهدف إلى تقديم أدوات رقمية تساعد الأشخاص ذوي الإعاقة على التعبير عن احتياجاتهم، والتعلم، وزيادة استقلاليتهم والمشاركة في المجتمع.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="index.html">TAMKEEN <span>✳</span></a>
+    <p data-i18n="footerLine">قدرات مختلفة.. فرص متساوية.</p>
+    <small>© <span id="year"></span> TAMKEEN. All rights reserved BY:OLIVER @AA-SCALE .</small>
+  </footer>
+
+  <script src="script.js"></script>
+<script src="accessibility.js"></script>
+</body>
+</html>

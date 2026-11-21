@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="أدوات تمكين الرقمية للمساعدة البصرية والسمعية والتعلم والحياة اليومية والاستعداد للعمل.">
+<title>الأدوات المساعدة | TAMKEEN</title><link rel="stylesheet" href="tools.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="index.html">TAMKEEN <span>✳</span></a><nav><a href="index.html">الرئيسية</a><a href="account.html">حسابي</a><a href="#visual">المساعدة البصرية</a><a href="#hearing">المساعدة السمعية</a><a href="#daily">الحياة اليومية</a></nav><a class="back" href="index.html">العودة للرئيسية ←</a></header>
+<main class="wrap">
+<section class="page-intro"><span class="eyebrow">ACCESSIBILITY TOOLKIT</span><h1>أدوات تساعدك على إنجاز يومك</h1><p>مجموعة أدوات عملية تعمل مباشرة من المتصفح. اختَر الأداة المناسبة وابدأ استخدامها.</p>
+<div class="notice">ملاحظة: الأدوات تعمل محليًا على جهازك. بعض خصائص الصوت تعتمد على دعم المتصفح واللغة المثبتة على الجهاز.</div></section>
+<section class="tool-card" id="visual"><div class="card-head"><span class="ico">👁️</span><div><span class="tag">01 · VISUAL</span><h2>المساعدة البصرية</h2><p>كبّر النص، غيّر التباين، واستمع إلى المحتوى المكتوب.</p></div></div>
+<div class="toolbar"><button id="fontDown" class="btn soft">A− تصغير</button><button id="fontUp" class="btn soft">A+ تكبير</button><button id="contrast" class="btn soft">تباين مرتفع</button><button id="resetVisual" class="btn soft">إعادة الضبط</button></div>
+<label for="visualText">اكتب أو الصق النص الذي تريد قراءته</label><textarea id="visualText" rows="5" placeholder="اكتب النص هنا..."></textarea><div class="actions"><button id="readText" class="btn primary">🔊 اقرأ النص</button><button id="stopRead" class="btn soft">إيقاف القراءة</button></div><p class="status" id="visualStatus" aria-live="polite"></p></section>
+<section class="tool-card" id="hearing"><div class="card-head"><span class="ico">👂</span><div><span class="tag">02 · HEARING</span><h2>تحويل الكلام إلى نص</h2><p>حوّل كلامك إلى كتابة باستخدام ميكروفون الجهاز، إذا كان المتصفح يدعم ذلك.</p></div></div>
+<div class="toolbar"><label for="speechLang">لغة التعرّف</label><select id="speechLang"><option value="ar-EG">العربية</option><option value="en-US">English</option></select><button id="startSpeech" class="btn primary">🎙️ ابدأ الاستماع</button><button id="stopSpeech" class="btn soft" disabled>إيقاف</button></div>
+<label for="speechOutput">النص الناتج</label><textarea id="speechOutput" rows="5" placeholder="سيظهر الكلام هنا..." aria-live="polite"></textarea><div class="actions"><button id="copySpeech" class="btn soft">نسخ النص</button><button id="clearSpeech" class="btn soft">مسح</button></div><p class="status" id="speechStatus" aria-live="polite"></p></section>
+<section class="tool-card" id="smart-learning"><div class="card-head"><span class="ico">✨</span><div><span class="tag">SMART LEARNING</span><h2>مساعد تبسيط المحتوى التعليمي</h2><p>حوّل النص الطويل إلى شرح منظم ونقاط أسهل في القراءة.</p></div></div>
+<label for="smartInput">النص أو الدرس</label><textarea id="smartInput" rows="6" placeholder="الصق الدرس أو الفقرة هنا..."></textarea>
+<div class="toolbar"><button id="simplifyBtn" class="btn primary" type="button">✨ بسّط المحتوى</button><button id="clearSmart" class="btn soft" type="button">مسح</button></div>
+<div id="smartResult" class="smart-result" aria-live="polite"><p class="muted">ستظهر هنا نسخة منظمة من المحتوى.</p></div>
+<p class="muted">تنبيه: النسخة الحالية تستخدم معالجة محلية لتنظيم النص وتقسيمه، وليست نموذج ذكاء اصطناعي متصلًا بالإنترنت. يلزم ربط Backend وواجهة API لتقديم إجابات توليدية موثوقة.</p></section>
+<section class="tool-card" id="learning"><div class="card-head"><span class="ico">📚</span><div><span class="tag">03 · LEARNING</span><h2>التعلم والقراءة المبسطة</h2><p>قسّم المحتوى إلى فقرات قصيرة، كبّر الخط، واستمع لكل جزء.</p></div></div>
+<label for="learningText">الصق الدرس أو النص</label><textarea id="learningText" rows="6" placeholder="أضف النص التعليمي هنا..."></textarea><div class="toolbar"><button id="splitLearning" class="btn primary">تنظيم النص إلى أجزاء</button><button id="clearLearning" class="btn soft">مسح</button></div><div id="learningParts" class="learning-parts"><p class="muted">الأجزاء المنظمة ستظهر هنا.</p></div></section>
+<section class="tool-card" id="daily"><div class="card-head"><span class="ico">🏠</span><div><span class="tag">04 · DAILY LIFE</span><h2>منظّم المهام اليومية</h2><p>أضف مهامك، تابع إنجازها، وستظل محفوظة على هذا الجهاز.</p></div></div>
+<form id="taskForm" class="task-form"><input id="taskInput" maxlength="120" required placeholder="مثال: تناول الدواء في موعده"><button class="btn primary" type="submit">إضافة مهمة</button></form><div class="task-summary" id="taskSummary">لا توجد مهام بعد.</div><ul id="taskList" class="task-list"></ul><button id="clearCompleted" class="btn soft">حذف المهام المكتملة</button></section>
+<section class="tool-card" id="work"><div class="card-head"><span class="ico">💼</span><div><span class="tag">05 · EDUCATION & WORK</span><h2>الاستعداد للتعليم والعمل</h2><p>خطوات صغيرة تساعدك على تنظيم استعدادك للدراسة أو التقديم لوظيفة.</p></div></div>
+<div class="progress-row"><span>تقدمك في الاستعداد</span><strong id="workProgress">0%</strong></div><div class="progress"><span id="workProgressBar"></span></div>
+<div class="checklist" id="workChecklist">
+<label><input type="checkbox" value="goal"> حدد المجال أو الوظيفة التي تستهدفها</label>
+<label><input type="checkbox" value="skills"> اكتب أهم مهاراتك</label>
+<label><input type="checkbox" value="cv"> جهّز سيرة ذاتية محدثة</label>
+<label><input type="checkbox" value="portfolio"> اجمع نماذج من أعمالك</label>
+<label><input type="checkbox" value="practice"> تدرب على أسئلة المقابلات</label>
+<label><input type="checkbox" value="apply"> قدّم على فرصة مناسبة</label></div>
+<label for="workNotes">ملاحظاتك وخطتك</label><textarea id="workNotes" rows="4" placeholder="اكتب أهدافك أو الخطوة التالية..."></textarea><button id="saveWork" class="btn primary">حفظ التقدم</button><p class="status" id="workStatus" aria-live="polite"></p></section>
+
+<section class="tool-card" id="image-reader"><div class="card-head"><span class="ico">📷</span><div><span class="tag">06 · IMAGE TO TEXT</span><h2>تحويل الصور والمستندات إلى نص</h2><p>ارفع صورة أو التقط صورة بالكاميرا، وسنحاول استخراج النص العربي أو الإنجليزي منها لتتمكن من قراءته أو الاستماع إليه.</p></div></div>
+<div class="image-controls"><label class="upload-label" for="imageUpload">🖼️ اختيار صورة من الجهاز</label><input id="imageUpload" type="file" accept="image/*" capture="environment"><button id="startCamera" class="btn soft" type="button">📸 تشغيل الكاميرا</button><button id="takePhoto" class="btn primary" type="button" disabled>التقاط صورة</button><button id="stopCamera" class="btn soft" type="button" disabled>إغلاق الكاميرا</button></div>
+<video id="cameraPreview" class="camera-preview" autoplay playsinline muted hidden aria-label="معاينة الكاميرا"></video><canvas id="photoCanvas" hidden></canvas><img id="imagePreview" class="image-preview" alt="معاينة الصورة المختارة" hidden>
+<div class="toolbar"><label for="ocrLanguage">لغة النص في الصورة</label><select id="ocrLanguage"><option value="ara+eng">العربية والإنجليزية</option><option value="ara">العربية</option><option value="eng">English</option></select><button id="extractText" class="btn primary" type="button" disabled>استخراج النص من الصورة</button></div>
+<label for="ocrOutput">النص المستخرج (يمكنك تعديله)</label><textarea id="ocrOutput" rows="6" placeholder="سيظهر النص المستخرج هنا..."></textarea><div class="actions"><button id="readOcr" class="btn primary" type="button">🔊 قراءة النص بصوت</button><button id="copyOcr" class="btn soft" type="button">نسخ النص</button><button id="clearOcr" class="btn soft" type="button">مسح</button></div><p id="ocrStatus" class="status" role="status" aria-live="polite">تحتاج ميزة استخراج النص إلى اتصال بالإنترنت لتحميل محرك OCR أول مرة. استخدم الكاميرا عبر HTTPS أو localhost.</p></section>
+<section class="tool-card" id="more-support"><div class="card-head"><span class="ico">🤝</span><div><span class="tag">PERSONALIZED ACCESSIBILITY</span><h2>خدمات إضافية حسب احتياجك</h2><p>مجموعة أدوات مساندة يمكن استخدامها بشكل مستقل أو مع الأدوات السابقة.</p></div></div>
+<div class="support-grid">
+<article class="support-item"><span>👁️</span><h3>للإعاقة البصرية</h3><p>قراءة النصوص بصوت، تكبير الخط والتباين، واستخراج النص من الصور والمستندات.</p><a href="#image-reader">استخراج النص من صورة</a></article>
+<article class="support-item"><span>👂</span><h3>للإعاقة السمعية</h3><p>تحويل الكلام إلى نص مباشر، وكتابة الرسائل بدل المكالمات، مع عرض النص بخط واضح.</p><a href="#hearing">فتح تحويل الكلام لنص</a></article>
+<article class="support-item"><span>🗣️</span><h3>صعوبات النطق والتواصل</h3><p>لوحة تواصل بالصور والعبارات الجاهزة مع إمكانية نطق الجملة بصوت مسموع.</p><a href="communication.html">فتح لوحة التواصل</a></article>
+<article class="support-item"><span>🧠</span><h3>صعوبات التعلم والانتباه</h3><p>تقسيم الدروس إلى أجزاء قصيرة، تبسيط عرض المحتوى، والاستماع لكل جزء على حدة.</p><a href="#learning">تنظيم الدروس</a></article>
+<article class="support-item"><span>🧩</span><h3>التوحد وصعوبات التواصل الاجتماعي</h3><p>روتين يومي مرئي، عبارات مصورة للاحتياجات والمشاعر، وخطوات واضحة للمهام.</p><a href="#daily">تنظيم الروتين اليومي</a></article>
+<article class="support-item"><span>♿</span><h3>الإعاقة الحركية</h3><p>دعم التنقل بلوحة المفاتيح، أزرار كبيرة، وإمكانية الإملاء الصوتي بدل الكتابة متى دعم المتصفح ذلك.</p><a href="#hearing">استخدام الإملاء الصوتي</a></article>
+</div></section>
+
+<footer>© <span id="year"></span> TAMKEEN · قدرات مختلفة، فرص متساوية.</footer>
+</main><script src="https://cdn.jsdelivr.net/npm/tesseract.js@5.0.5/dist/tesseract.min.js" defer></script><script src="tools.js"></script><script src="image-tools.js"></script><script src="accessibility.js"></script>
+</body></html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="حساب المستخدم والإعدادات الشخصية في تمكين."><title>حسابي | TAMKEEN</title><link rel="stylesheet" href="account.css"></head>
+<body>
+<header class="account-header"><a class="brand" href="index.html">TAMKEEN <span>✳</span></a><nav><a href="index.html">الرئيسية</a><a href="tools.html">الأدوات</a><a href="communication.html">التواصل</a></nav></header>
+<main class="account-wrap">
+<section class="intro"><span class="eyebrow">YOUR SPACE · TAMKEEN</span><h1>مساحتك الشخصية</h1><p>أنشئ ملفًا شخصيًا تجريبيًا واحفظ تفضيلات العرض على هذا الجهاز.</p></section>
+<div class="account-grid">
+<section class="account-card" id="authCard"><div class="tabs"><button class="tab active" id="showLogin" type="button">تسجيل الدخول</button><button class="tab" id="showRegister" type="button">إنشاء حساب</button></div>
+<form id="authForm"><label for="fullName" id="nameLabel" hidden>الاسم</label><input id="fullName" autocomplete="name" placeholder="الاسم الكامل" hidden>
+<label for="email">البريد الإلكتروني</label><input id="email" type="email" autocomplete="email" required placeholder="name@example.com">
+<label for="password">كلمة المرور</label><input id="password" type="password" minlength="6" autocomplete="current-password" required placeholder="6 أحرف على الأقل">
+<button class="btn primary" id="authSubmit" type="submit">دخول</button><p id="authStatus" class="status" role="status"></p></form>
+<div class="privacy-note">هذه نسخة تجريبية: بيانات الحساب تُحفظ محليًا في المتصفح ولا تُعد نظام مصادقة آمنًا. لا تستخدم كلمة مرور حقيقية.</div></section>
+<section class="account-card profile-card"><div class="profile-top"><div class="avatar" id="avatar">؟</div><div><span class="eyebrow">PROFILE SETTINGS</span><h2>الملف الشخصي</h2><p id="profileState" class="muted">سجّل الدخول لعرض ملفك.</p></div></div>
+<form id="profileForm"><label for="profileName">الاسم الظاهر</label><input id="profileName" placeholder="اسمك" disabled>
+<label for="profileNeed">نوع الدعم المفضل</label><select id="profileNeed" disabled><option value="standard">دعم عام</option><option value="visual">إعاقة بصرية</option><option value="hearing">إعاقة سمعية</option><option value="speech">صعوبات النطق والتواصل</option><option value="motor">إعاقة حركية</option><option value="learning">صعوبات التعلم والانتباه</option><option value="autism">التوحد ودعم الروتين والتواصل</option><option value="reading">قراءة صوتية عند الطلب</option><option value="reduced">تقليل الحركة</option></select>
+<label for="profileLanguage">اللغة</label><select id="profileLanguage" disabled><option value="ar">العربية</option><option value="en">English</option></select>
+<button class="btn primary" type="submit" disabled id="saveProfile">حفظ الإعدادات</button><button class="btn soft" type="button" id="logout" disabled>تسجيل الخروج</button><p id="profileStatus" class="status" role="status"></p></form></section>
+</div><p class="footnote">لإطلاق حقيقي: يجب تنفيذ التسجيل وتشفير كلمات المرور وإدارة الجلسات على خادم آمن وربط قاعدة بيانات، وليس داخل المتصفح.</p>
+</main><script src="account.js"></script><script src="accessibility.js"></script></body></html>
